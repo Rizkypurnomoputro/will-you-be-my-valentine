@@ -1,5 +1,5 @@
 # Will You Be My Valentine? 💖
-[https://rizkypurnomoputro.github.io/will_you_be_my_valentine/](https://tinyurl.com/valentine-id)
+https://tinyurl.com/valentine-id
 ## About
 This is a special Valentine's Day project designed to spread love and appreciation. Whether you're asking someone special to be your Valentine or just want to share positivity, this project is a fun way to do it!
 

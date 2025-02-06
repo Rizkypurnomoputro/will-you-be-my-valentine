@@ -22,7 +22,6 @@ for (let i = 0; i <= MAX_IMAGES; i++) {
   preloadedImages.push(jpg);
 }
 
-
 yesButton.addEventListener("click", handleYesClick);
 
 noButton.addEventListener("click", function () {
@@ -65,21 +64,18 @@ function generateMessage(noCount) {
   const messageIndex = Math.min(noCount, messages.length - 1);
   return messages[messageIndex];
 }
-
 function changeImage(image) {
-  const gifPath = `img/cat-${image}.gif`;
-  const jpgPath = `img/cat-${image}.jpg`;
+  let imgSrc;
 
-  const tempImg = new Image();
-  tempImg.src = gifPath;
+  if (noCount === 1) {
+    // Saat pertama kali klik "No", gunakan GIF
+    imgSrc = `img/cat-${image}.gif`;
+  } else {
+    // Klik berikutnya gunakan JPG agar lebih cepat
+    imgSrc = `img/cat-${image}.jpg`;
+  }
 
-  tempImg.onload = function () {
-    catImg.src = gifPath;
-  };
-
-  tempImg.onerror = function () {
-    catImg.src = jpgPath;
-  };
+  catImg.src = imgSrc;
 }
 
 function updateNoButtonText() {

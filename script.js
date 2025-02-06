@@ -10,6 +10,18 @@ const MAX_IMAGES = 5;
 
 let play = true;
 let noCount = 0;
+const preloadedImages = [];
+
+for (let i = 0; i <= MAX_IMAGES; i++) {
+  const gif = new Image();
+  gif.src = `img/cat-${i}.gif`;
+  preloadedImages.push(gif);
+
+  const jpg = new Image();
+  jpg.src = `img/cat-${i}.jpg`;
+  preloadedImages.push(jpg);
+}
+
 
 yesButton.addEventListener("click", handleYesClick);
 
